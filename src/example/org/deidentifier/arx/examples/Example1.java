@@ -55,9 +55,9 @@ public class Example1 extends Example {
         data.add("45", "female", "81675");
         data.add("66", "male", "81925");
         data.add("70", "female", "81931");
-        data.add("34", "female", "81931");
+        data.add("34", "female", "81675");
         data.add("70", "male", "81931");
-        data.add("45", "male", "81931");
+        data.add("45", "female", "81675");
 
         // Define hierarchies
         DefaultHierarchy age = Hierarchy.create();
@@ -84,7 +84,7 @@ public class Example1 extends Example {
         // Create an instance of the anonymizer
         ARXAnonymizer anonymizer = new ARXAnonymizer();
         ARXConfiguration config = ARXConfiguration.create();
-        config.addPrivacyModel(new KAnonymity(3));
+        config.addPrivacyModel(new KAnonymity(2));
         config.setSuppressionLimit(0d);
 
         ARXResult result = anonymizer.anonymize(data, config);

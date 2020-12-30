@@ -17,10 +17,7 @@
 
 package org.deidentifier.arx.io;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.NoSuchElementException;
 
 /**
@@ -81,6 +78,7 @@ public class ImportConfigurationJDBC extends ImportConfiguration {
      * Determines whether we need to manage the JDBC connection.
      */
     private final boolean manageConnection;
+
 
     /**
      * Creates a new instance of this object.
@@ -179,6 +177,7 @@ public class ImportConfigurationJDBC extends ImportConfiguration {
         ResultSet rs = null;
         int index = -1;
         try {
+            DatabaseMetaData metaData = connection.getMetaData();
 
             rs = connection.getMetaData().getColumns(dbName,
                     schemaName,

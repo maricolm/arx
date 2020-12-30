@@ -100,6 +100,7 @@ public class Example22 extends Example {
         
         // Anonymize
         ARXResult result = anonymizer.anonymize(data, config);
-        printResult(result, data);
+      //  printResult(result, data);
+        print(result.getOutput());
     }
 }

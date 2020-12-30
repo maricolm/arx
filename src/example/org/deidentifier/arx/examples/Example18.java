@@ -52,11 +52,11 @@ public class Example18 extends Example {
     public static void main(String[] args) {
    
         redactionBased();
-        intervalBased();
+        /*intervalBased();
         orderBased();
         ldlCholesterol();
         dates();
-        loadStore();
+        loadStore();*/
     }
 
     /**

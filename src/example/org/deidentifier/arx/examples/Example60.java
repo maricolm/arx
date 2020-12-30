@@ -203,9 +203,9 @@ public class Example60 extends Example {
 
         // Define hierarchies
         DefaultHierarchy age = Hierarchy.create();
-        age.add("34", "<50", "*");
-        age.add("45", "<50", "*");
-        age.add("66", ">=50", "*");
+        age.add("34", "<50");
+        age.add("45", "<50");
+        age.add("66", ">=50");
         age.add("70", ">=50", "*");
 
         DefaultHierarchy gender = Hierarchy.create();
